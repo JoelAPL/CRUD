@@ -61,6 +61,33 @@
         .card form button:hover {
             background-color: #45a049;
         }
+
+        .edit-button {
+            background-color: yellow;
+            color: black;
+            border: none;
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .edit-button {
+            background-color: yellow !important;
+            color: black !important;
+            border: none !important;
+            padding: 5px !important;
+            border-radius: 50% !important;
+            cursor: pointer !important;
+            font-size: 16px !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+            transition: background-color 0.3s ease !important;
+            text-decoration: none !important;
+
+        }
+
+        .edit-button:hover {
+            background-color: #e6e600 !important;
+        }
+
     </style>    
 
 </head>
@@ -86,6 +113,7 @@
             echo '<th>Nombre</th>';
             echo '<th>Email</th>';
             echo '<th>Teléfono</th>';
+            echo '<th></th>';
             echo '</tr>';
 
             while ($fila = mysqli_fetch_assoc($resultado)) {
@@ -94,6 +122,7 @@
                 echo '<td>'.$fila['nombre'].'</td>';
                 echo '<td>'.$fila['email'].'</td>';
                 echo '<td>'.$fila['telefono'].'</td>';
+                echo '<td><a href="edit.php?id='.$fila['id'].'" class="edit-button">&#9998;</a></td>';
                 echo '</tr>';
             }
 
@@ -105,9 +134,7 @@
 
         mysqli_close($conexion);
         ?>
+
     </div>
 </body>
 </html>
-
-
-<!-- Agregar enlace o botón para acceder a create.php -->
