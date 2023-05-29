@@ -1,2 +1,22 @@
 Hola soy joel y este es una guia para realizar este proyecto titulado CRUD.
 El objetio es realizaro todo en PHP.
+
+Este es el script de la base de datos: 
+        CREATE DATABASE nombre_basedatos;
+
+        USE nombre_basedatos;
+
+        CREATE TABLE tabla (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            nombre VARCHAR(50) NOT NULL,
+            email VARCHAR(50) NOT NULL,
+            telefono VARCHAR(20) NOT NULL
+        );
+
+Nota: cambiar 'usuario' 'contraseña' de la base de datos en el archivo de config.php:
+$hostname = 'localhost'; // Cambia esto si tu servidor de base de datos está en otro host
+$username = 'root'; // Reemplaza con tu nombre de usuario de MySQL
+$password = 'byjoel123'; // Reemplaza con tu contraseña de MySQL
+$database = 'nombre_basedatos'; // Reemplaza con el nombre de tu base de datos
+
+(Recuerda hacer el cambio en el archivo guardar y refrescar la sesion).
