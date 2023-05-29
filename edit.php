@@ -125,24 +125,24 @@
     <div class="card">
         <h1>Editar Registro</h1>
 
-        <form action="edit_process.php" method="POST">
-            <input type="hidden" name="id" value="<?php echo $id; ?>">
+            <form action="edit_process.php" method="POST">
+                <input type="hidden" name="id" value="<?php echo $id; ?>">
 
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" value="<?php echo $nombre; ?>" required>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" value="<?php echo $nombre; ?>" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" value="<?php echo $email; ?>" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<?php echo $email; ?>" required>
 
-            <label for="telefono">Teléfono:</label>
-            <input type="text" id="telefono" name="telefono" value="<?php echo $telefono; ?>" required>
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" value="<?php echo $telefono; ?>" required>
 
-            
-            <div class="button-container">
-                <input type="submit" value="Guardar Cambios">
-                <a href="index.php" class="close-button">Cerrar</a>
-            </div>
+                
+                <div class="button-container">
+                    <input type="submit" value="Guardar Cambios">
+                    <a href="index.php" class="close-button">Cerrar</a>
+                </div>
 
-        </form>
+            </form>
     </div>
 </body>

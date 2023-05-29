@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Lista de Registros</title>
+
     <style>
         body {
             display: flex;
@@ -15,11 +16,15 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 400px;
+            width: 500px;
         }
 
         .card h1 {
             text-align: center;
+        }
+
+        .card-content {
+            overflow-x: auto;
         }
 
         .card table {
@@ -63,14 +68,6 @@
         }
 
         .edit-button {
-            background-color: yellow;
-            color: black;
-            border: none;
-            padding: 5px;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        .edit-button {
             background-color: yellow !important;
             color: black !important;
             border: none !important;
@@ -81,14 +78,24 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
             transition: background-color 0.3s ease !important;
             text-decoration: none !important;
-
         }
 
         .edit-button:hover {
             background-color: #e6e600 !important;
         }
 
-    </style>    
+        .delete-button {
+            background-color: #FF0000 !important;
+            color: white !important;
+            padding: 5px !important;
+            border-radius: 50% !important;
+            text-decoration: none !important;
+        }
+
+        .delete-button:hover {
+            background-color: #CC0000 !important;
+        }
+    </style>
 
 </head>
 <body>
@@ -122,7 +129,7 @@
                 echo '<td>'.$fila['nombre'].'</td>';
                 echo '<td>'.$fila['email'].'</td>';
                 echo '<td>'.$fila['telefono'].'</td>';
-                echo '<td><a href="edit.php?id='.$fila['id'].'" class="edit-button">&#9998;</a></td>';
+                echo '<td><a href="edit.php?id='.$fila['id'].'" class="edit-button">&#9998;</a> <a href="delete.php?id='.$fila['id'].'" class="delete-button">&#128465;</a></td>';
                 echo '</tr>';
             }
 
